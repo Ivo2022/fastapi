@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Client Dashboard{% endblock %}
+{% block content %}
+<h1>Welcome {{ user.username }} to your client dashboard!</h1>
+{% if user.is_admin %}
+  <a href="/admin/dashboard" class="btn btn-outline-primary">Go to Admin Panel</a>
+{% endif %}
+
+<!--<a href="/logout">Logout</a>
+{% if user.is_admin %}
+    <li><a href="/admin/dashboard">Admin Panel</a></li> -->
+{% endif %}
+{% endblock %}
